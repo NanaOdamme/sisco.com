@@ -6,3 +6,68 @@
 .number{
     margin-right: 100px;
 }
+
+.h1{
+    color: rgba(10, 166, 201, 1);
+    font-weight: 750;
+    font-size: 60px;
+}
+
+.values{
+   background-color: rgba(175, 220, 235, 0.489);
+    padding-bottom: 50px;
+}
+.values h6{
+    color: rgba(92, 136, 150, 0.674);
+    font-size: 20px;
+}
+.values h1{
+    color: rgba(59, 108, 124, 0.84);
+    font-weight: bolder;
+}
+
+.values p{
+    font-size: 10px;
+    color:rgba(92, 136, 150, 0.674) ;
+}
+.values h5{
+    color:rgba(43, 136, 164, 0.982) ;
+    font-weight: bolder;
+}
+
+.value-cards .card{
+    border: none;
+    background-color: rgb(235, 244, 249);
+}
+
+.value-cards .card:hover{
+    background-color: rgb(116, 187, 226);
+    
+}
+.value-cards h2{
+    color: rgb(41, 136, 136);
+    
+}
+.values a{
+   color: rgb(39, 115, 125);
+   float: right;
+}
+
+.values a:hover{
+    color: rgb(195, 232, 8);
+}
+
+.why_h1{
+    font-weight: 800;
+    color: rgb(52, 112, 118);
+}
+
+.reviews{
+    background-color: rgb(219, 231, 253);
+}
+
+.reviews h1{
+    font-size: 30px;
+    font-weight:bold ;
+    color: rgb(38, 100, 100);
+}
