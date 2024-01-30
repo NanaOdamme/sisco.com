@@ -1,7 +1,7 @@
 
 
 .main-nav-bars{
-    margin-right: 500px;
+    margin-right: 200px;
 }
 
 .main-nav-bars a{
@@ -101,7 +101,7 @@
 .reviews h1{
     font-size: 30px;
     font-weight:bold ;
-    color: rgb(38, 100, 100);
+    color: rgb(3, 48, 116);;
 }
 
 /* Add your existing styles here */
@@ -113,6 +113,11 @@
     transition: transform 0.5s;
     padding: 10px;
     
+  }
+
+  .staff-text{
+    color: rgb(3, 48, 116);
+    font-weight: 700;
   }
   
   .card:hover {
