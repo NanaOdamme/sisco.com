@@ -1,3 +1,5 @@
+
+
 .main-nav-bars{
     margin-right: 500px;
 }
@@ -13,7 +15,7 @@
 
 
 .number a{
-    margin-right: 100px;
+  /*  margin-right: 100px;*/
     color: rgb(26, 26, 149);
 }
 
@@ -103,13 +105,14 @@
 }
 
 /* Add your existing styles here */
-
+.staff{
+    background-color: rgba(173, 220, 220, 0.301);
+}
 .staff .card {
     /* Add a transition effect for the transform property */
     transition: transform 0.5s;
-    width: 80%;
     padding: 10px;
-    margin: 10px;
+    
   }
   
   .card:hover {
@@ -158,3 +161,27 @@
   .newsletter h6{
     color: rgb(54, 82, 82);
   }
+
+  .footer{
+    background-color: rgba(19, 159, 194, 1);
+  }
+
+  .footer svg{
+    color: #fff;
+    width: 25px;
+    margin-top:-50px;
+
+  }
+
+  .footer h6
+  {
+    margin-top: 50px;
+    font-weight: 700;
+    color: #ffffffe8;
+  }
+
+  .footer a{
+    font-weight: 400;
+    color: #d5ebf5c8;
+  }
+
