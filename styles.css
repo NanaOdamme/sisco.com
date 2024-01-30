@@ -2,21 +2,53 @@
     margin-right: 500px;
 }
 
+.main-nav-bars a{
+    color: rgba(59, 108, 124, 1);
+    font-size: large;
+} 
 
-.number{
-    margin-right: 100px;
+.main-nav-bars a.link:hover{
+    color: rgb(98, 176, 224);
 }
 
+
+.number a{
+    margin-right: 100px;
+    color: rgb(26, 26, 149);
+}
+
+.number a:hover{
+    color: rgb(64, 214, 222);
+}
+
+  
+  /* Dropdown links hover effect */
+  .navbar-nav .dropdown-menu a.dropdown-item:hover {
+    background-color: rgba(241, 245, 7, 0.1);
+    color: rgba(10, 80, 158, 1);
+  }
+  
+  /*smooth transition for a smoother effect */
+  .navbar-nav .nav-item a.nav-link,
+  .navbar-nav .dropdown-menu a.dropdown-item {
+    transition: color 0.3s, background-color 0.3s;
+  }
+
+  .navbar-toggler{
+    color: rgb(243, 231, 21);
+  }
+  
 .h1{
     color: rgba(10, 166, 201, 1);
     font-weight: 750;
     font-size: 60px;
 }
 
+
 .values{
-   background-color: rgba(175, 220, 235, 0.489);
-    padding-bottom: 50px;
+    background-color: rgba(177, 224, 224, 0.582);
 }
+
 .values h6{
     color: rgba(92, 136, 150, 0.674);
     font-size: 20px;
@@ -62,12 +94,67 @@
     color: rgb(52, 112, 118);
 }
 
-.reviews{
-    background-color: rgb(219, 231, 253);
-}
+
 
 .reviews h1{
     font-size: 30px;
     font-weight:bold ;
     color: rgb(38, 100, 100);
 }
+
+/* Add your existing styles here */
+
+.staff .card {
+    /* Add a transition effect for the transform property */
+    transition: transform 0.5s;
+    width: 80%;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .card:hover {
+    /* Scale up the card on hover */
+    transform: scale(1.05);
+    transition: transform 0.5s;
+  }
+  
+  .newsletter{
+    background-color: rgba(255, 221, 0, 0.47);
+  }
+
+
+  .newsletter .text
+  {
+    width: 300px;
+    height: 40px;
+    
+  }
+
+ .newsletter .text{
+        background-color: rgb(41, 106, 109);
+        border: none;
+        color: aliceblue;
+  }
+
+  .newsletter .btn{
+    width: 300px;
+    height: 40px;
+    background-color:rgb(233, 240, 247) ;
+    color:rgb(33, 93, 94) ;
+    font-weight: 600;
+  }
+  .newsletter .forms{
+    float: right;
+  }
+
+  .newsletter .btn:hover{
+    background-color: rgb(26, 168, 219);
+  }
+
+  .newsletter .text::placeholder{
+    color: azure;
+    padding: 10px;
+  }
+  .newsletter h6{
+    color: rgb(54, 82, 82);
+  }
