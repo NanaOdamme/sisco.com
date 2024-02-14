@@ -46,7 +46,7 @@
                 
                   <ul class="navbar-nav contact-us">
                     <li class="nav-item mb-3">
-                        <a class="nav-link" href="index.html"><button type="button" class="btn btn-primary p-1" style="color: #fff; font-weight:500;">
+                        <a class="nav-link" href="index.html"><button type="button" class="btn btn-primary p-1 px-5" style="color: #fff; font-weight:500;">
                            Go Back
                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short " viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
@@ -60,21 +60,26 @@
     </header>
 
     <section class="forms p-5">
-        <h1 class="text-center ">Send Us A Message</h1>
-        <div class="container-md mt-5 p-5 border rounded-5">
-            <form>
-                <div class="mb-3">
-                  <label for="exampleInputEmail1" class="form-label">Email:</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="example@gmail.com">
-                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-                </div>
+      <img src="images/contactusimg.svg" class="mb-5 mx-auto d-block" style=" width:20%;" alt="">
+        <h1 class="text-center " style="color: rgb(7, 82, 128);">Send Us A Message</h1>
+        
+        <div class="container-md mt-5 p-5 border border-5 border-info rounded-5">
+          <form id="contactForm">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email:</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" name="email" aria-describedby="emailHelp" placeholder="example@gmail.com" required>
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+        
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Message:</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" name="message" rows="3" required></textarea>
+            </div>
+        
+            <button type="submit" class="btn btn-info btn-lg mx-auto d-block px-5 mt-5">Send</button>
 
-                  <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label">Message:</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                  </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-              </form>
+        </form>
+        
         </div>
 
     </section>
@@ -131,5 +136,40 @@
       </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    </body>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+      function sendEmail() {
+        var form = document.getElementById("contactForm");
+    
+        // Check if the form element is present
+        if (!form || form.tagName !== "FORM") {
+            console.error("Form element not found or not of type 'form'");
+            return;
+        }
+    
+        var formData = new FormData(form);
+    
+        fetch('https://api.emailjs.com/api/v1.0/email/send-form', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Authorization': 'Bearer lDBFYLOn5_L_qG4Dg',
+            },
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("Email sent successfully:", data);
+            // Display success message
+            alert("Message sent, we will contact you soon!");
+        })
+        .catch(error => {
+            console.log("Email sending failed:", error);
+            alert("Sorry, your message cannot be sent now.");
+        });
+    }
+    
+    </script>
+    
+    
+  </body>
     </html>
